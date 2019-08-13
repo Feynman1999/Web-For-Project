@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load staticfiles %}   <!-- 虽然extends了 但还是要加上 -->
+
+{% block title %}
+    Detail
+{% endblock %}
+
+{% block header_extend %}
+    <link rel="stylesheet" href="{% static 'css/history_detail.css' %}"> 
+{% endblock  %}
+
+
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="row">
+                <div class="col-xs-4" style="text-align: center">
+                    <div class="row"><h2>Input</h2></div><br>
+                    <img src="{{upload.img1.url}}" width="90%" class="img-responsive" style="margin: auto;"/><br><br>   
+                </div>
+                <div class="col-xs-4" style="text-align: center">
+                    <div class="row"><h2>Output1</h2></div><br>
+                    <img src="{{upload.img2.url}} " width="90%" class="img-responsive" style="margin: auto;"/><br><br><br>
+                    <div class="row">
+                        <a href="{{upload.img2.url}}" download="{{upload.img2.name}}">
+                            <button type="button" class="btn btn-danger btn-lg" style="background-color: rgba(73,182,195,1);border-color: rgba(73,182,195,1);">下载</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-4" style="text-align: center">
+                    <div class="row"><h2>Output2</h2></div><br>
+                    <img src="{{upload.img3.url}}" width="90%" class="img-responsive" style="margin: auto;"/><br><br><br>
+                    <div class="row">
+                        <a href="{{upload.img3.url}}" download="{{upload.img3.name}}">
+                            <button type="button" class="btn btn-danger btn-lg" style="background-color: rgba(73,182,195,1);border-color: rgba(73,182,195,1);">下载</button>
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+{% endblock  %}
+

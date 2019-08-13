@@ -1,0 +1,36 @@
+canvas{
+    /* border: 1px solid black; */
+}
+
+body{
+    margin: 0;
+}
+
+nav.navbar{
+    margin-bottom: 30px;
+}
+
+.zoom {
+    display: inline-block;
+    position: relative; 
+}
+  
+/* magnifying glass icon */
+.zoom:after {
+content: '';
+display: block;
+width: 33px;
+height: 33px;
+position: absolute;
+top: 0;
+right: 0;
+}
+
+.zoom img {
+display: block; }
+
+.zoom img::-moz-selection {
+background-color: transparent; }
+
+.zoom img::selection {
+background-color: transparent; }

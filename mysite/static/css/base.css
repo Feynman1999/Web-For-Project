@@ -1,0 +1,81 @@
+#easysketch{
+  width:130px;
+  font-size:24px;
+  font-family:LucidaGrande-Bold;
+  font-weight:bold;
+  color:rgba(73,182,195,1);
+}
+ul.navbar-right li a{
+  font-size:20px;
+  font-family:LucidaGrande-Bold;
+  font-weight:bold;
+  color:rgba(73,182,195,1);
+}
+nav.navbar{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.navbar-brand {padding: 0px; padding-left: 10px; line-height: 50px;}
+
+ul.navbar-nav  li.active > a,
+ul.navbar-nav  li.active > a:focus{
+  color: rgb(12, 12, 12);
+}
+
+.nav-item:hover a{
+  color:rgb(12, 12, 12);
+}
+
+.nav>li>a:hover{
+  background-color: transparent;
+}
+
+.nav-item{
+  cursor: pointer;
+  transition: background 0.5s, color 0.5s;
+  -webkit-transition: background 0.5s, color 0.5s;
+}
+
+
+.nav-item::after{content:'';display:block;width:0px;height:2px;background:rgba(73,182,195,1);transition: 0.4s;}
+.nav-item:hover::after{width:100%;}
+ul.navbar-nav  li.active::after{width:100%;}
+
+
+
+
+
+.btn-dark, .btn-dark:hover, .btn-dark:active, .btn-dark:visited {
+  background-color: rgba(73,182,195,1);
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+/* Set the fixed height of the footer here */
+height: 58px;
+background-color: #4e4e4e;
+}
+
+  
+  
+
+#btnScroll{  /*回到顶部按钮*/
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px; 
+  color: white
+}

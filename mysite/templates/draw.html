@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles %}   <!-- 虽然extends了 但还是要加上 -->
+
+{% block title %}
+    Draw
+{% endblock %}
+
+{% block header_extend %}
+    <link rel="stylesheet" href="{% static 'css/draw.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" media="screen">
+{% endblock  %}
+
+{% block nav_draw_active %}
+    active
+{% endblock %}
+
+{% block content %}
+<div style="text-align:center">
+    <span class='zoom' id='ex1'>
+        <img src="{% static 'images/4-2.jpg' %}"  height='500' alt='Daisy on the Ohoopee'>
+    </span>    
+</div>
+
+{% endblock  %}
+
+{% block script %}
+<script type="text/javascript" src="{% static 'js/jquery.zoom.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/draw.js' %}"></script>
+<!-- <script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script>
+<script src="{% static 'js/hammer.min.js' %}"></script>
+<script src="{% static 'js/jquery.hammer.js' %}"></script>
+<script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+<script src="{% static 'js/imgViewer.min.js' %}"></script>  -->
+{% endblock  %}

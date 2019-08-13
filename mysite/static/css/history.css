@@ -1,0 +1,15 @@
+/* img.resize {
+    height:233px;
+} */
+
+nav.navbar{
+    margin-bottom: 26px;
+}
+
+
+.center-cropped{
+    background-size: 400px;
+    height:233px;
+    background-position: center center;
+    background-repeat: no-repeat;
+} 

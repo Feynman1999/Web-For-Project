@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load staticfiles %}   <!-- 虽然extends了 但还是要加上 -->
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block meta_extend %}
+<meta http-equiv="refresh" content="6">
+{% endblock %}
+
+{% block header_extend %}
+    <link rel="stylesheet" href="{% static 'css/history.css' %}"> 
+{% endblock  %}
+
+{% block nav_history_active %}active{% endblock %}
+
+{% block content %}
+
+<div class="row" style="border-top: 1.2px solid rgb(194, 189, 189);">
+    <br><br><br>
+</div>
+
+<div class="row">
+    <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="container-fluid">
+                <div class="row">
+                    {% for it in uploads %}
+                        <div class="col-lg-4 col-md-6 col-xs-12">
+                            {% if it.img2 %}
+                                <a href="{% url 'history_detail' it.id %}" class="thumbnail center-cropped" style="margin-bottom:10px; background-image: url('{{it.img1.url}}');"></a>
+                                <div class="row" style="text-align: center">
+                                    <img height="38px;" src={% static 'ok.png' %} />&nbsp;&nbsp;
+                                    <b>已完成 <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{it.finished_time}}</b>
+                                </div>
+                            {% else %}
+                                <a class="thumbnail center-cropped" style="margin-bottom:10px; background-image: url('{{it.img1.url}}');"></a> 
+                                <div class="row" style="text-align: center">
+                                    <img height="38px;" src={% static 'wait.gif' %} />&nbsp;&nbsp;
+                                    <b>处理中 <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{it.upload_time}}</b>
+                                </div>
+                            {% endif %}
+                            <br><br>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    <div class="col-md-1"></div>
+</div>
+
+<br><br><br>
+
+{% endblock  %}
+
+
+
+
+{% block script %}
+<script type="text/javascript">
+</script>
+{% endblock  %}
